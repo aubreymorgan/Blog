@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fffacd;
+    background-color: #7c7719;
     font-family: 'Permanent Marker', cursive;
     padding: 15px 20px;
     }
@@ -12,7 +12,7 @@
     .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #faf4e6;
     }
     
     /* Navigation links */
@@ -29,13 +29,13 @@
     /* Link styles */
     .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #faf4e6;
     font-size: 18px;
     padding: 8px 12px;
     border-radius: 5px;
     }
     
     .nav-links a:hover {
-    background-color: #ff6b6b;
-    color: #333;
+    background-color: #eb9c7d;
+    color: #faf4e6;
     }
