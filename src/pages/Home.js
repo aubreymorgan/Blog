@@ -12,11 +12,11 @@ function Home() {
             </p>
 
             <div className="feature-section">
-                <h2>✨ Features of This Blog ✨</h2>
+                <h2>Features of This Blog</h2>
                 <ul>
-                    <li>📝 Create and publish your own posts</li>
-                    <li>📖 Read posts from other users</li>
-                    <li>❌ Easily delete posts you no longer need</li>
+                    <li>Create and publish your own posts</li>
+                    <li>Read posts from other users</li>
+                    <li>Easily delete posts you no longer need</li>
                 </ul>
             </div>
 

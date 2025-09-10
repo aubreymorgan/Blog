@@ -4,16 +4,16 @@ import "./Navbar.css";
 function Navbar() {
     return (
       <nav className="navbar">
-        <div className="logo">Aubrey's Blog</div>
+        <div className="logo">AUBREY'S BLOG</div>
         <ul className="nav-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">(HOME)</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">(BLOG)</Link>
           </li>
           <li>
-            <Link to="/newPost">New Post</Link>
+            <Link to="/newPost">(NEW POST)</Link>
           </li>
         </ul>
       </nav>
