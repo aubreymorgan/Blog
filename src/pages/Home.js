@@ -3,6 +3,7 @@ import "../App.css";
 
 function Home() {
     return (
+        
         <div className="home-container">
             <h1>Welcome to My Blog</h1>
             <p className="intro-text">
