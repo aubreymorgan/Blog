@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "./Navbar.js";
+import Navbar from "./navbar/Navbar.js";
 import Home from "./pages/Home.js";
 import Blog from "./pages/Blog.js";
 import NewPost from "./pages/NewPost.js";

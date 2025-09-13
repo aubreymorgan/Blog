@@ -4,8 +4,20 @@ import "./Navbar.css";
 function Navbar() {
     return (
       <nav className="navbar">
-        <i className="icons fa-brands fa-square-linkedin"></i>
-        <i className="icons fa-brands fa-square-github"></i>
+        <a 
+          href="https://www.linkedin.com/in/aubrey-morgan-b58b7b250/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <i className="icons fa-brands fa-square-linkedin"></i>
+        </a>
+        <a 
+          href="https://github.com/aubreymorgan" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <i className="icons fa-brands fa-square-github"></i>
+        </a>
         <ul className="nav-links">
           <li>
             <Link to="/">(HOME)</Link>
