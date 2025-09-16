@@ -154,18 +154,46 @@
   background-repeat: no-repeat;
   min-height: 100vh;
 }
-/* New Intro Header */
+
+/* Home Header */
 .block1 {
   display: flex;
-  justify-content: center;
-  flex: 1;
-}
-.block1 img {
-  flex: 30%;
+  align-items: flex-start; /* keep text aligned with top of image */
+  justify-content: flex-start; /* push items to the left */
+  color: #A95B35; 
+  text-align: left;
+  padding-right: 60px; /* 🔹 extra space on the right */
+  gap: 30px;           /* 🔹 space between image and text */
 }
 
-.block1 p {
-  flex: 70%;
+.block1 img {
+  max-width: 450px;   /* scale image down if too large */
+  height: auto;
+}
+
+.introText {
+  flex: 1;            /* allow text to take remaining space */
+}
+
+.block1 h1{
+  font-weight: 400;
+}
+
+.block1 h2{
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.block1 h3 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .block2 {
@@ -187,6 +215,7 @@
   line-height: 1.5; /* Controls text line spacing */
 }
 
+/* Home Info */
 .block3 {
   background-color: #A95B35; /* section background */
   display: flex;             
@@ -203,66 +232,47 @@
   padding: 20px 30px;
   border-radius: 15px;       
   flex: 1;                   
-  max-width: 500px;          
+  max-width: 500px;
+  height: 250px;             /* 🔹 fixed height */          
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.text-box h1 {
+.box-title {
   font-family: "Playfair Display", serif;
   font-style: italic;
+  font-weight: 400;
   text-align: left;
+  font-size: 30px;
+  margin-bottom: 8px;
 }
 
-
-/************** OLD ******************/
-/* Intro Header */
-.home-container h1 {
-  font-weight: 400;
+.box-divider {
+  border: none;
+  border-top: 2px solid #A95B35; /* line under title */
+  margin-bottom: 12px;
 }
 
-/* Intro Text */
-.intro-text {
+.box-text {
   font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 600;
+  font-weight: 100;
   font-style: normal;
-  font-size: 1.2rem;
-  color: #333;
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-/* Feature Section */
-.feature-section {
-  background: #fffacd; /* Light yellow paper color */
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid #ff4500; /* Red left margin */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
-  max-width: 600px;
+  font-size: 16px;
   text-align: left;
+  line-height: 1.5;
 }
 
-.feature-section h2 {
-  font-weight: 400;
+.box-text li {
+  list-style-type: circle;
 }
 
-.feature-section ul {
-  list-style-type: none;
-  padding: 0;
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+/* 📱 Mobile layout */
+@media (max-width: 768px) {
+  .homepage-section {
+    flex-direction: column;  
+    align-items: stretch;    
+  }
 
-.feature-section li {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-/* Call to Action */
-.cta-text {
-  font-size: 1.2rem;
-  color: #ff4500;
-  margin-top: 30px;
+  .text-box {
+    max-width: 100%;        
+  }
 }

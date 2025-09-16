@@ -1,8 +1,4 @@
 // NewPost.js --> Contains a form for creating new posts.
-// To add:
-//  clear input fields after hitting submit
-//  validate feilds are not empty before hitting submit
-//  time is not displaying
 
 import { useState } from "react";
 import "../App.css"; 
@@ -32,12 +28,21 @@ function NewPost({setPosts}) {
             title,
             author,
             content,
-            time: new Date().toLocaleString() // Ensure parentheses to call the function
+            time: new Date().toLocaleString() 
         };
-    
-        // Display new post in an alert box
-        alert(`Title: ${newPost.title}\nAuthor: ${newPost.author}\nContent: ${newPost.content}\nPosted on: ${newPost.time}`);        
-    
+
+        //  confirmation before submitting
+        const confirmed = window.confirm(
+            `Are you sure you are ready to submit this blog post?\n` +
+            `Title: ${newPost.title}\n` +
+            `Author: ${newPost.author}\n` +
+            `Content: ${newPost.content}`
+        );
+
+        if (!confirmed) {
+            return; // stop if user canceled
+        }
+
         // After submission, update the blog post list dynamically
         setPosts((prevPosts) => prevPosts.concat(newPost));
 
