@@ -1,0 +1,92 @@
+/************** NEW POST ******************/
+body {
+  background: #FAF4E6;
+}
+
+.NewPost-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #E2EAFB; 
+  border: 2px solid #5170FF;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.NewPost-container h1 {
+    font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #5170FF;
+  letter-spacing: 1px;
+}
+
+.NewPost-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.NewPost-input,
+.NewPost-textarea {
+  width: 98%;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  text-align: left;
+  background: #E2EAFB;
+  color: #5170FF;
+  outline: none;
+  border-style: solid;
+  border-color: #5170FF;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.NewPost-input {
+  height: 40px;
+}
+
+.NewPost-textarea {
+  min-height: 200px;     /* starting size */
+  resize: none;          /* prevent manual drag resize */
+  overflow: hidden;      /* hide scrollbar */
+}
+
+
+.NewPost-button {
+  background: #E2EAFB;
+  color: #5170FF;
+  border: 2px solid #5170FF;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.3s ease;
+  padding: 12px 24px;   /* top/bottom, left/right */
+  display: block;        /* makes margin auto work */
+  margin: 20px auto 0;   /* center horizontally */
+}
+
+.NewPost-button:hover {
+  background: #EB9C7D;
+}
+
+/* Error message styling */
+.NewPost-error {
+  color: #FF3131;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-family: "Zen Maru Gothic", sans-serif;
+  text-align: center;
+}

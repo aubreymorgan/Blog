@@ -1,18 +1,15 @@
 // Home.js --> Displays a welcome message.
-import "../App.css"; 
+import "./Home.css"; 
 
 function Home() {
-    return (
-        
+    return ( 
         <div className="home-container">
             <div className="block1">
-                <img src="/images/me.png" alt="stripes"/>
                 <div className="introText">
-                    <h1>Welcome to My Blog</h1>
-                    <h2>A short sentance in bold.</h2>
-                    <h3>A place to share thoughts, stories, and experiences.  
-                    Dive into a collection of posts written by passionate authors,  
-                    and feel free to contribute your own insights!</h3>
+                    <div className="title-wrapper">
+                        <h1>Welcome to My Blog</h1>
+                        <img src="/images/flowers3.png" alt="flowers" className="flower-overlay" />
+                    </div>
                 </div>
             </div>
             <div className="block2">

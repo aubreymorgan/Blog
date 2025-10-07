@@ -1,7 +1,6 @@
 // NewPost.js --> Contains a form for creating new posts.
-
 import { useState } from "react";
-import "../App.css"; 
+import "./NewPost.css"; 
 
 
 function NewPost({setPosts}) {
@@ -39,8 +38,9 @@ function NewPost({setPosts}) {
             `Content: ${newPost.content}`
         );
 
+        // stop if user canceled
         if (!confirmed) {
-            return; // stop if user canceled
+            return;
         }
 
         // After submission, update the blog post list dynamically
@@ -51,6 +51,16 @@ function NewPost({setPosts}) {
         setAuthor("");
         setContent("");
     }
+
+    // Auto-resize handler for textarea
+    function handleContentChange(event) {
+        setContent(event.target.value);
+
+        // Reset then adjust height based on scrollHeight
+        event.target.style.height = "auto";
+        event.target.style.height = event.target.scrollHeight + "px";
+    }
+
     
 
     return (
@@ -79,7 +89,7 @@ function NewPost({setPosts}) {
                     value = {content}
                     placeholder = "Write your post here..."
                     className="NewPost-textarea"
-                    onChange = {(event) => setContent(event.target.value)}
+                    onChange = {handleContentChange}
                 />
                 <br />
                 <button type = "submit" className="NewPost-button">Submit</button>

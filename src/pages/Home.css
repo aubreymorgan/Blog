@@ -1,0 +1,154 @@
+/************** HOME ******************/
+/* Home Page Styling */
+.home-container {
+  text-align: center;
+  background-color: #FAF4E6; /* Light beige background */
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Home Header */
+.block1 {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically (if block has height) */
+  text-align: center;        /* ensures child text is centered */
+  min-height: 70vh;          /* adjust how tall this section is */
+  color: #A95B35;
+  padding-top: 50px;
+  position: relative;
+}
+
+.introText {
+  flex: 1;
+}
+
+.title-wrapper {
+  position: relative;
+  display: inline-block;     /* shrink-wraps around h1 */
+  margin: 0 auto;            /* centers wrapper in flexbox */
+}
+
+.title-wrapper h1 {
+  font-size: clamp(40px, 10vw, 100px); /* responsive text size */
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;                /* text above flowers */
+}
+
+.flower-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;               /* matches h1 width */
+  height: auto;              /* keeps proportions */
+  z-index: 2;                /* flowers below text */
+  pointer-events: none;      /* don’t block clicks */
+}
+
+
+.block1 h2{
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  height: 200px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.block1 h3 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.block2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EB9C7D;
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #A95B35;
+  padding: 0;
+}
+
+.block2 h4 {
+  margin: 0;
+  padding: 4px 12px;
+  line-height: 1.5; /* Controls text line spacing */
+}
+
+/* Home Info */
+.block3 {
+  background-color: #A95B35; 
+  display: flex;             
+  justify-content: center;   /* center horizontally */
+  align-items: center;       
+  gap: 20px;                 
+  padding: 80px;
+  flex-wrap: wrap;           /* allows wrapping if needed */
+}
+
+.text-box {
+  background-color: #faf4e6; 
+  color: #A95B35;              
+  padding: 20px 30px;
+  border-radius: 15px;       
+  flex: 1;                   
+  max-width: 500px;
+  height: 250px;                   
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.box-title {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.box-divider {
+  border: none;
+  border-top: 2px solid #A95B35; /* line under title */
+  margin-bottom: 12px;
+}
+
+.box-text {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.box-text li {
+  list-style-type: circle;
+}
+
+/* 📱 Mobile layout */
+@media (max-width: 768px) {
+  .homepage-section {
+    flex-direction: column;  
+    align-items: stretch;    
+  }
+
+  .text-box {
+    max-width: 100%;        
+  }
+}

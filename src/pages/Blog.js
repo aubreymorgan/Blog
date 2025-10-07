@@ -1,5 +1,5 @@
 // Blog.js --> Shows a list of blog posts.
-import "../App.css"; 
+import "./Blog.css"; 
 
 function Blog({posts, setPosts}) {
 
@@ -12,7 +12,7 @@ function Blog({posts, setPosts}) {
         <div className="blog-container">
             <h1>Blog</h1>
             {posts.length === 0 ? (
-                <p>No submission yet!</p>
+                <h2>Head over to the New Post page to get started!</h2>
             ) : (
                 <ul style={{ listStyle: "none", padding: 0 }}>
                     {posts.map((post, index) => (
@@ -23,7 +23,7 @@ function Blog({posts, setPosts}) {
                             <p className="blog-content">{post.content}</p>
                             {/* Delete Button at Bottom Right */}
                             <button className="delete-btn" onClick={() => handleDelete(index)}>
-                                Delete
+                                <i class="fa-regular fa-trash-can"></i>
                             </button>
                         </li>
                         ))

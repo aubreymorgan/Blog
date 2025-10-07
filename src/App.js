@@ -4,8 +4,6 @@ import Navbar from "./navbar/Navbar.js";
 import Home from "./pages/Home.js";
 import Blog from "./pages/Blog.js";
 import NewPost from "./pages/NewPost.js";
-import "./App.css";
-
 
 function App() {
 
