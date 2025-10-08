@@ -40,12 +40,6 @@
     transition: all 0.3s ease; /* Smooth hover transition */
 }
 
-/* Flowers on navbar */
-.nav-links img {
-    width: 18px;
-    height: 18px;
-}
-
 /* Hover styles - More specific */
 .navbar .nav-links a:hover {
     background-color: #eb9c7d !important;
@@ -69,7 +63,7 @@
     cursor: pointer;
     text-decoration: none;
     color: #faf4e6;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .icons:hover {
@@ -89,8 +83,8 @@
     white-space: nowrap;
   }
 
-  .nav-links img {
-    width: 14px;
-    height: 14px;
-  }
+  .icons {
+    font-size: 15px;
 }
+}
+
