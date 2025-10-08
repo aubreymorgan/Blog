@@ -7,30 +7,29 @@
 }
 
 .blog-container h1 {
-    font-family: 'Jua', sans-serif;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 80px;
-    color: #5170FF;
-    background: #E2EAFB;
-    padding: 15px;
-    border: 2px solid #5170FF;
-    border-radius: 10px;
-    width: 225px;
-    align-items: center;
-    text-align: center;
+  font-family: 'Jua', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 80px;
+  color: #5170FF;
+  background: #E2EAFB;
+  padding: 15px;
+  border: 2px solid #5170FF;
+  border-radius: 10px;
+  width: 225px;
+  align-items: center;
+  text-align: center;
 }
 
 .blog-container h2 {
-    font-family: 'Jua', sans-serif;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #A95B35;
-    background: #EB9C7D;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #A95B35;
+  background: #EB9C7D;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
 }
 
 .blog-post {
@@ -92,4 +91,18 @@
 
 .delete-btn:hover {
   background-color: #EB9C7D;
+}
+
+@media (max-width: 600px) {
+  .blog-container h2 {
+    font-size: 16px;          
+    width: 85%;               
+    max-width: 400px;         
+    text-align: center;        
+    word-wrap: break-word;     /* ensure text wraps cleanly */
+    line-height: 1.4;         
+    margin: 20px auto;         
+    padding: 12px;           
+    box-sizing: border-box;    /* ensures padding doesn't increase total width */
+  }
 }

@@ -17,7 +17,7 @@
   justify-content: center;   /* centers horizontally */
   align-items: center;       /* centers vertically (if block has height) */
   text-align: center;        /* ensures child text is centered */
-  min-height: 70vh;          /* adjust how tall this section is */
+  min-height: 70vh;          
   color: #A95B35;
   padding-top: 50px;
   position: relative;
@@ -87,7 +87,7 @@
 .block2 h4 {
   margin: 0;
   padding: 4px 12px;
-  line-height: 1.5; /* Controls text line spacing */
+  line-height: 1.5; /* controls text line spacing */
 }
 
 /* Home Info */
@@ -168,7 +168,6 @@
     box-sizing: border-box;   /* ensures padding doesn’t affect width */
   }
 }
-
 
 /* Mobile - fine-tune smaller screens */
 @media (max-width: 600px) {
