@@ -76,3 +76,21 @@
     color: #eb9c7d;
     transform: scale(1.2); /* subtle zoom */
 }
+
+@media (max-width: 500px) {
+  .nav-links {
+    gap: 8px;
+    flex-wrap: nowrap; /* prevent wrapping */
+  }
+
+  .navbar .nav-links a {
+    font-size: 15px;
+    padding: 4px 6px;
+    white-space: nowrap;
+  }
+
+  .nav-links img {
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -34,7 +34,7 @@
 }
 
 .title-wrapper h1 {
-  font-size: clamp(40px, 10vw, 100px); /* responsive text size */
+  font-size: clamp(40px, 10vw, 100px); 
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
@@ -58,7 +58,6 @@
   font-family: 'Jua', sans-serif;
   font-weight: 400;
   font-size: 15px;
-  height: 200px;
   font-style: normal;
   text-transform: uppercase;
 }

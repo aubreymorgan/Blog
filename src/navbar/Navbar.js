@@ -9,13 +9,7 @@ function Navbar() {
             <Link to="/">(HOME)</Link>
           </li>
           <li>
-            <img src="/images/flower2.png" alt="flower"/>
-          </li>
-          <li>
             <Link to="/blog">(BLOG)</Link>
-          </li>
-          <li>
-            <img src="/images/flower2.png" alt="flower"/>
           </li>
           <li>
             <Link to="/newPost">(NEW POST)</Link>
