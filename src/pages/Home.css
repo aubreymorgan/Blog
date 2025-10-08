@@ -140,7 +140,7 @@
   list-style-type: circle;
 }
 
-/* 📱 Mobile layout */
+/* Mobile */
 @media (max-width: 768px) {
   .homepage-section {
     flex-direction: column;  
@@ -149,5 +149,44 @@
 
   .text-box {
     max-width: 100%;        
+  }
+}
+
+/* Stack boxes neatly and uniformly */
+@media (max-width: 990px) {
+  .block3 {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center the boxes */
+    padding: 40px;
+    gap: 30px;                /* consistent vertical space */
+  }
+
+  .text-box {
+    width: 90%;               /* both boxes same width */
+    max-width: 600px;         /* cap it so they don’t stretch too wide */
+    height: auto;             /* prevent overflow */
+    box-sizing: border-box;   /* ensures padding doesn’t affect width */
+  }
+}
+
+
+/* Mobile - fine-tune smaller screens */
+@media (max-width: 600px) {
+  .block3 {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .text-box {
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+
+  .box-title {
+    font-size: 22px;
+  }
+
+  .box-text {
+    font-size: 14px;
   }
 }
