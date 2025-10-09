@@ -15,20 +15,22 @@ function Navbar() {
             <Link to="/newPost">(NEW POST)</Link>
           </li>
         </ul>
-        <a 
-            href="https://www.linkedin.com/in/aubrey-morgan-b58b7b250/" 
-            target="_blank" 
-            rel="noopener noreferrer">
-            <i className="icons fa-brands fa-square-linkedin"></i>
-        </a>
-        <a 
-            href="https://github.com/aubreymorgan" 
-            target="_blank" 
-            rel="noopener noreferrer">
-            <i className="icons fa-brands fa-square-github"></i>
-        </a>
+        <div className="social-icons">
+          <a 
+              href="https://www.linkedin.com/in/aubrey-morgan-b58b7b250/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              <i className="icons fa-brands fa-square-linkedin"></i>
+          </a>
+          <a 
+              href="https://github.com/aubreymorgan" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              <i className="icons fa-brands fa-square-github"></i>
+          </a>
+        </div>
       </nav>
     );
-  }
+}
 
 export default Navbar;

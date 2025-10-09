@@ -1,23 +1,23 @@
 /* Navbar container */
 .navbar {
     display: flex;
-    justify-content: left;
+    justify-content: center; /* Center the nav links */
     align-items: center;
     background-color: hsl(57, 66%, 29%);
     color: #faf4e6;
     position: sticky;
     top: 0;
-    z-index: 1000; /* ensures it stays above blog posts */
+    z-index: 1000;
     font-family: 'Jua', sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 10px 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative; /* For absolute positioning of icons */
 }
 
-/* Navigation links */
+/* Navigation links - centered across full width */
 .nav-links {
-    flex: 50;
     display: flex;
     justify-content: center;
     list-style: none;
@@ -30,17 +30,17 @@
     display: inline;
 }
 
-/* Link styles - More specific selectors */
+/* Link styles */
 .navbar .nav-links a {
-    text-decoration: none !important; /* Force override */
-    color: #faf4e6 !important; /* Force override */
+    text-decoration: none !important; 
+    color: #faf4e6 !important; 
     font-size: 18px;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: all 0.3s ease; /* Smooth hover transition */
+    transition: all 0.3s ease; 
 }
 
-/* Hover styles - More specific */
+/* Hover styles */
 .navbar .nav-links a:hover {
     background-color: #eb9c7d !important;
     color: #faf4e6 !important;
@@ -59,32 +59,71 @@
     text-decoration: none !important;
 }
 
+/* Social icons - positioned on the right */
+.social-icons {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 .icons {
     cursor: pointer;
     text-decoration: none;
     color: #faf4e6;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 .icons:hover {
     color: #eb9c7d;
-    transform: scale(1.2); /* subtle zoom */
+    transform: scale(1.2);
+}
+
+.icons:visited {
+    color: #faf4e6;
+
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .social-icons {
+    right: 15px;
+    gap: 10px;
+  }
+
+  .icons {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 500px) {
   .nav-links {
     gap: 8px;
-    flex-wrap: nowrap; /* prevent wrapping */
   }
 
   .navbar .nav-links a {
-    font-size: 15px;
+    font-size: 14px;
     padding: 4px 6px;
     white-space: nowrap;
   }
 
+  .social-icons {
+    right: 10px;
+    gap: 8px;
+  }
+
   .icons {
     font-size: 15px;
+  }
 }
-}
-

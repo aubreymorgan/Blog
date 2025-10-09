@@ -2,8 +2,7 @@
 import { useState } from "react";
 import "./NewPost.css"; 
 
-
-function NewPost({setPosts}) {
+function NewPost({addPost}) {  // Changed from setPosts to addPost
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [content, setContent] = useState("");
@@ -22,34 +21,39 @@ function NewPost({setPosts}) {
         // Clear any previous error messages
         setError("");
     
-        // Create a newPost object
-        const newPost = {
-            title,
-            author,
-            content,
-            time: new Date().toLocaleString() 
-        };
-
-        //  confirmation before submitting
+        // Confirmation before submitting
         const confirmed = window.confirm(
             `Are you sure you are ready to submit this blog post?\n` +
-            `Title: ${newPost.title}\n` +
-            `Author: ${newPost.author}\n` +
-            `Content: ${newPost.content}`
+            `Title: ${title}\n` +
+            `Author: ${author}\n` +
+            `Content: ${content}`
         );
 
-        // stop if user canceled
+        // Stop if user canceled
         if (!confirmed) {
             return;
         }
 
-        // After submission, update the blog post list dynamically
-        setPosts((prevPosts) => prevPosts.concat(newPost));
+        // Create a newPost object (without id and timestamp - App.js adds those)
+        const newPost = {
+            title,
+            author,
+            content
+        };
+
+        // Call addPost function from App.js
+        addPost(newPost);
 
         // Clear input fields
         setTitle("");
         setAuthor("");
         setContent("");
+        
+        // Reset textarea height
+        const textarea = document.querySelector('.NewPost-textarea');
+        if (textarea) {
+            textarea.style.height = "auto";
+        }
     }
 
     // Auto-resize handler for textarea
@@ -60,9 +64,7 @@ function NewPost({setPosts}) {
         event.target.style.height = "auto";
         event.target.style.height = event.target.scrollHeight + "px";
     }
-
     
-
     return (
         <div className="NewPost-container">
             <h1>New Post</h1>
@@ -96,7 +98,6 @@ function NewPost({setPosts}) {
             </form>
         </div>
     );
-
 }
 
 export default NewPost;
