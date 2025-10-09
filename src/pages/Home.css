@@ -1,17 +1,14 @@
 /************** HOME ******************/
-/* Home Page Styling */
 .home-container {
   text-align: center;
   background-color: #FAF4E6; /* Light beige background */
-  font-family: "Playfair Display", serif;
-  font-style: italic;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
 
-/* Home Header */
+/**** BLOCK 2 ****/
 .block1 {
   display: flex;
   justify-content: center;   /* centers horizontally */
@@ -19,7 +16,6 @@
   text-align: center;        /* ensures child text is centered */
   min-height: 70vh;          
   color: #A95B35;
-  padding-top: 50px;
   position: relative;
 }
 
@@ -35,62 +31,83 @@
 
 .title-wrapper h1 {
   font-size: clamp(40px, 10vw, 100px); 
+  font-family: "Playfair Display", serif;
+  font-style: italic;
   font-weight: 400;
-  text-transform: uppercase;
   margin: 0;
   line-height: 1.5;
-  position: relative;
-  z-index: 1;                /* text above flowers */
+  position: relative;             
 }
 
-.flower-overlay {
+.decorative-circle {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;               /* matches h1 width */
-  height: auto;              /* keeps proportions */
-  z-index: 2;                /* flowers below text */
-  pointer-events: none;      /* don’t block clicks */
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #EB9C7D, #A95B35);
+  opacity: 0.15;
+  z-index: 0;
 }
 
-
-.block1 h2{
+.hero-subtitle {
   font-family: 'Jua', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  font-style: normal;
+  font-size: 20px;
   text-transform: uppercase;
+  color: #A95B35;
+  margin-top: 10px;
 }
 
-.block1 h3 {
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 16px;
-  text-align: left;
-  line-height: 1.5;
-}
-
+/**** BLOCK 2 ****/
 .block2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #EB9C7D;
+  overflow: hidden;
+  padding: 12px 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.banner-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+  gap: 0;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.banner-content h4 {
   font-family: 'Jua', sans-serif;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
   color: #A95B35;
-  padding: 0;
-}
-
-.block2 h4 {
   margin: 0;
-  padding: 4px 12px;
-  line-height: 1.5; /* controls text line spacing */
+  font-size: 18px;
+  display: inline-block;
 }
 
-/* Home Info */
+.banner-content .flower {
+  height: 25px;
+  width: auto;
+  display: inline-block;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/**** BLOCK 3 ****/
 .block3 {
   background-color: #A95B35; 
   display: flex;             
@@ -150,26 +167,51 @@
   .text-box {
     max-width: 100%;        
   }
+
+  .banner-content {
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .banner-content h4 {
+    font-size: 16px;
+  }
+  
+  .banner-content .flower {
+    height: 20px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .decorative-circle {
+    width: 300px;
+    height: 300px;
+  }
 }
 
-/* Stack boxes neatly and uniformly */
 @media (max-width: 990px) {
   .block3 {
-    flex-direction: column;   /* stack vertically */
-    align-items: center;      /* center the boxes */
+    flex-direction: column;   
+    align-items: center;     
     padding: 40px;
-    gap: 30px;                /* consistent vertical space */
+    gap: 30px;               
   }
 
   .text-box {
-    width: 90%;               /* both boxes same width */
-    max-width: 600px;         /* cap it so they don’t stretch too wide */
-    height: auto;             /* prevent overflow */
-    box-sizing: border-box;   /* ensures padding doesn’t affect width */
+    width: 90%;              
+    max-width: 600px;         
+    height: auto;             
+    box-sizing: border-box;   
   }
 }
 
-/* Mobile - fine-tune smaller screens */
 @media (max-width: 600px) {
   .block3 {
     padding: 20px;
@@ -189,3 +231,19 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 480px) {
+  .banner-content {
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .banner-content h4 {
+    font-size: 14px;
+  }
+  
+  .banner-content .flower {
+    height: 18px;
+  }
+}
+
